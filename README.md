@@ -10,6 +10,9 @@ Examples
 ### Example 1
 
 The following example illustrates the simple use case of computing LOF values of several instances (e.g. `[0,0],[5,5],[10,10] and [-8,-8]`) based on the `instances` variable that we pass to the `LOF` constructor.
+
+已知样本点，输入测试样本，输出测试样本在已知样本中的lof值，比较测试样本和已知样本的离散程度
+
 ```
 instances = [
  (-4.8447532242074978, -5.6869538132901658),
@@ -62,6 +65,9 @@ represent instances passed to LOF constructor, green dots are instances that
 are not outliers (lof value <= 1) and red dots are instances that are outliers 
 (lof value > 1). The size or red dots represents the lof value, meaning that 
 greater lof values result in larger dots.
+
+蓝点表示已知样本点，测试样本输出时，lof值 < 1时，显示绿色，表示和已知样本很接近；lof值 > 1时，表示离散点，用红色表示，LOF值越大，点半径越大，表示异常程度越大
+
 ![Plot](https://github.com/damjankuznar/pylof/raw/master/example1.png)
 Code used for plotting the above plot (matplotlib is required):
 ```
@@ -80,6 +86,9 @@ p.show()
 
 ### Example 2
 Pylof also has a helper function to identify outliers in a given instances dataset.
+
+同时,Pylof还能标识出已知样本中的异常点
+
 ```
 instances = [
  (-4.8447532242074978, -5.6869538132901658),
@@ -139,6 +148,8 @@ represent instances passed to LOF constructor, green dots are instances that
 are not outliers (lof value <= 1) and red dots are instances that are outliers 
 (lof value > 1). The size or red dots represents the lof value, meaning that 
 greater lof values result in larger dots.
+同上
+
 ![Plot](https://github.com/damjankuznar/pylof/raw/master/example2.png)
 Code used for plotting the above plot (matplotlib is required):
 ```
