@@ -169,3 +169,8 @@ p.show()
 TODO
 -----
  * Increase the unit test coverage
+ 
+References
+-----
+ * http://www.cse.ust.hk/~leichen/courses/comp5331/lectures/LOF_Example.pdf
+ * https://towardsdatascience.com/density-based-algorithm-for-outlier-detection-8f278d2f7983
